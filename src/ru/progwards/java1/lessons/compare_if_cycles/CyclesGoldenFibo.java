@@ -3,13 +3,13 @@ package ru.progwards.java1.lessons.compare_if_cycles;
 public class CyclesGoldenFibo {
     public static boolean containsDigit(int number, int digit){
         boolean result = false;
-        while (number > 0){
+        do {
             if(number % 10 == digit){
                 result = true;
                 break;
             }
             number /= 10;
-        }
+        } while (number > 0);
         return result;
     }
     public static int fiboNumber(int n){
