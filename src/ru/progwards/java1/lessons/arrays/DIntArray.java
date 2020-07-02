@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class DIntArray {
     private int[] a;
 
-    public DIntArray(int[] a){
-        this.a = Arrays.copyOf(a, a.length);
+    public DIntArray(){
+
     }
 
     public void add(int num){
@@ -40,7 +40,7 @@ public class DIntArray {
     public static void main(String[] args) {
         int i = 0;
         int[] array = {1, 2};
-        DIntArray a = new DIntArray(array);
+        DIntArray a = new DIntArray();
 
         System.out.println("Добавили элемент");
         a.add(5);
