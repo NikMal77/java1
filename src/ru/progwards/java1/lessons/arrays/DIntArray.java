@@ -6,7 +6,7 @@ public class DIntArray {
     private int[] a;
 
     public DIntArray(){
-
+        a = new int[0];
     }
 
     public void add(int num){
@@ -44,6 +44,8 @@ public class DIntArray {
 
         System.out.println("Добавили элемент");
         a.add(5);
+        a.add(-7);
+        a.add(10);
         for (i = 0; i < 3; i++){
             System.out.println("Элемент " + i + " имеет значение " + a.at(i));
         }
