@@ -36,6 +36,7 @@ public class CalculateFibonacci {
 
     public static void clearLastFibo(){
         lastFibo = null;
+        lastFibo = new CacheInfo();
     }
 
     public static void main(String[] args) {
@@ -53,5 +54,9 @@ public class CalculateFibonacci {
         int fibo;
         fibo = CalculateFibonacci.fiboNumber(15);
         fibo = CalculateFibonacci.fiboNumber(16);
+
+        clearLastFibo();
+        System.out.println("Последнее значение fibo: " + getLastFibo().fibo);
+
      }
 }
