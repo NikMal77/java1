@@ -1,8 +1,8 @@
-package lessons.lesson5.unit5_3;
+package lessons.lesson8.unit8_2;
 
 import java.util.Objects;
 
-public class Rectangle extends Square {
+public final class Rectangle extends Square {
     double b;
 
     Rectangle(double a, double b){
