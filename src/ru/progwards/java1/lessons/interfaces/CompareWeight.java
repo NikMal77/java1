@@ -1,6 +1,6 @@
 package ru.progwards.java1.lessons.interfaces;
 
-public interface CompareWeight<CompareWeight> {
+public interface CompareWeight<T> {
 
     public enum CompareResult{
         LESS,
@@ -8,5 +8,6 @@ public interface CompareWeight<CompareWeight> {
         GREATER
     }
 
-    public CompareResult compareWeight(CompareWeight smthHasWeigt);
+    CompareResult compareWeight(T smthHasWeigt);
+
 }

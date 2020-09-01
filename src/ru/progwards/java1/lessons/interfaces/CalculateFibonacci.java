@@ -20,8 +20,7 @@ public class CalculateFibonacci {
                 lastFibo.n = n;
                 lastFibo.fibo = sum;
                 return sum;
-            }
-            else return 0;
+            } else return 0;
         }
     }
 
@@ -36,7 +35,6 @@ public class CalculateFibonacci {
 
     public static void clearLastFibo(){
         lastFibo = null;
-        lastFibo = new CacheInfo();
     }
 
     public static void main(String[] args) {
@@ -55,8 +53,7 @@ public class CalculateFibonacci {
         fibo = CalculateFibonacci.fiboNumber(15);
         fibo = CalculateFibonacci.fiboNumber(16);
 
-        clearLastFibo();
-        System.out.println("Последнее значение fibo: " + getLastFibo().fibo);
+
 
      }
 }
