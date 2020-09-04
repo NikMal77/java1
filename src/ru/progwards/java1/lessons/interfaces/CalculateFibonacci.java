@@ -4,6 +4,7 @@ public class CalculateFibonacci {
     private static CacheInfo lastFibo = new CacheInfo();
 
     public static int fiboNumber(int n){
+        if (lastFibo == null) return 0;
         if (n == lastFibo.n) return lastFibo.fibo;
         else {
             if (n > 0) {
