@@ -1,8 +1,10 @@
 package ru.progwards.java1.lessons.bigints;
 
+import java.math.BigInteger;
+
 public class AbsInteger {
-    int num;
-    public AbsInteger(int num){
+    BigInteger num;
+    public AbsInteger(BigInteger num){
         this.num = num;
     }
 
@@ -15,10 +17,22 @@ public class AbsInteger {
         else if (sum > Short.MIN_VALUE && sum < Short.MAX_VALUE){
             return new ShortInteger((short) sum);
         }
-        else return new AbsInteger(sum);
+        else if (sum > Integer.MIN_VALUE && sum < Integer.MAX_VALUE){
+            return new IntInteger(sum);
+        }
+        else return new AbsInteger(BigInteger.valueOf(sum));
     }
 
     public int toInt(){
         return 0;
+    }
+
+    public static void main(String[] args) {
+        IntInteger num1 = new IntInteger( -200000000);
+        IntInteger num2 = new IntInteger( 200000000);
+        System.out.println(num1.getClass());
+        System.out.println(num2.getClass());
+        System.out.println(AbsInteger.add(num1, num2));
+
     }
 }
